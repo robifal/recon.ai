@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #C7212D;
+    --primary-hover: #A51B25;
+    --background-light: #EDF1F2;
+    --text-dark: #000000;
+    --text-light: #FFFFFF;
+    --text-gray: #888888;
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 6px 6px rgba(0, 0, 0, 0.15);
+  }
