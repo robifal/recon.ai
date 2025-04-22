@@ -81,12 +81,22 @@ function App() {
 
   // Limpa o stream quando o componente é desmontado
   useEffect(() => {
+    if (showCamera && videoRef.current && stream) {
+      videoRef.current.srcObject = stream
+      videoRef.current.play().catch(err => {
+        console.error('Erro ao iniciar vídeo:', err)
+      })
+    }
+  }, [showCamera, stream])
+  
+  useEffect(() => {
     return () => {
       if (stream) {
         stream.getTracks().forEach(track => track.stop())
       }
     }
   }, [stream])
+  
 
   return (
     <div className="app">
